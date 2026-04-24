@@ -1,4 +1,4 @@
-# madman - Dev Container 
+# mini - Dev Container 
 
 The *madman* is a quick start into a curiated dev container for peek
 a terminal/coding experience. This repo contains a Linux
