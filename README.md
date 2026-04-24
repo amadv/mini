@@ -1,6 +1,6 @@
 # mini - Dev Container 
 
-The *madman* is a quick start into a curiated dev container for peek
+The *mini* is a quick start into a curiated dev container for peek
 a terminal/coding experience. This repo contains a Linux
 [Containerfile](Containerfile) that has a bit of everything to have fun
 while sampling and learning. Inspired by Robs boost container and all of
@@ -11,14 +11,14 @@ socials](https://linktr.ee/rwxrob).
 1. Build and run the `dejavu` container locally
 
 ```sh
-podman build -t madman https://github.com/amadv/madman.git
-podman run -it --privileged --hostname madman --name madman madman
+podman build -t mini https://github.com/amadv/mini.git
+podman run -it --privileged --hostname mini --name mini mini
 ```
 
 If you want to throw away the container after running just add `--rm` to the `run` command above. Otherwise, when you `exit` it will still be there and you can restart and attach later to continue your work until you explicitly remove it:
 
 ```sh
-podman start -a madman
+podman start -a mini
 ```
 
 When you are ready to use the `man` pages consider running `sudo unminimize`.
