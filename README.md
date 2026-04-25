@@ -8,11 +8,18 @@ this work. He is the best check him out [Rob's
 socials](https://linktr.ee/rwxrob).
 
 1. Install [Podman](https://podman.io/) (or [Docker](https://docker.com) if you must)
-1. Build and run the `dejavu` container locally
+1. Build and run the `mini` container locally
 
+**Podman:**
 ```sh
 podman build -t mini https://github.com/amadv/mini.git
 podman run -it --privileged --hostname mini --name mini mini
+```
+
+**Docker** (requires BuildKit for the APT cache mount):
+```sh
+docker buildx build -t mini https://github.com/amadv/mini.git
+docker run -it --privileged --hostname mini --name mini mini
 ```
 
 If you want to throw away the container after running just add `--rm` to the `run` command above. Otherwise, when you `exit` it will still be there and you can restart and attach later to continue your work until you explicitly remove it:
