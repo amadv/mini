@@ -27,6 +27,9 @@ If you want to throw away the container after running just add `--rm` to the `ru
 ```sh
 podman start -a mini
 ```
+```sh
+docker build -t mini .
+```
 
 When you are ready to use the `man` pages consider running `sudo unminimize`.
 
