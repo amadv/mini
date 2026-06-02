@@ -9,13 +9,13 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked apt-get update -q
 RUN apt-get install -yq --no-install-recommends \
   ssh git ed nvi vim sudo man jq less \
-  shfmt shellcheck nodejs npm pandoc curl w3m lynx entr pip \
+  shfmt shellcheck nodejs npm pandoc curl w3m lynx entr \
   bash-completion gpg nmap tree tmux screen \
-  make uidmap ruby python3 python-is-python3 \
+  make uidmap \
   perl libcurses-perl build-essential \
   libncurses-dev autoconf fio sqlite3 \
   apt-transport-https ca-certificates \
-  php tidy \
+  tidy \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN cpan -I Term::Animation
@@ -34,8 +34,3 @@ ENV GOPATH="/home/ubuntu/.local/share"
 ENV GOPROXY="direct"
 
 RUN install-gh
-RUN install-go
-RUN install-yq
-RUN install-composer
-RUN install-claude-code
-
